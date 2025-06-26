@@ -7,7 +7,6 @@ public class binarySearch {
         for(int i = 0 ; i < arr.length;i++){
             map.put(arr[i],i);
         }
-        // binary search works in sorted arrays 
         System.out.println(binary(arr,40,map));
     }
     public static int binary(int arr[],int target,Map<Integer,Integer> map){
