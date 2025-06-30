@@ -4,7 +4,7 @@ public class BestTimeToBuyAndSellStock {
         int[] prices = {7, 6, 4, 3, 1};
 
         System.out.println(profit(prices));
-
+        
     }
     public static int profit(int prices[]){
         int mp = Integer.MIN_VALUE;
