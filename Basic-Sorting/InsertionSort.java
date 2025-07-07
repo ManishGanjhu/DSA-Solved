@@ -14,7 +14,7 @@ public class InsertionSort {
             int curr = arr[i]; // element to insert
             int j = i-1;
 
-            while(j>=0 && arr[j]>curr){
+            while(j>=0 && curr<arr[j]){
                 arr[j+1]=arr[j]; // shift element right
                 j--;// move left
             }
