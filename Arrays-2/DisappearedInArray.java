@@ -5,21 +5,17 @@ public class DisappearedInArray {
         System.out.println(findDisappearedNumbers(nums));
     }
     public static List<Integer> findDisappearedNumbers(int[] nums) {
-        // Step 1: Mark seen indices as negative
-        for (int i = 0; i < nums.length; i++) {
-            int index = Math.abs(nums[i]) - 1;         // Get index from value
-            nums[index] = -Math.abs(nums[index]);      // Mark it negative
+        HashSet<Integer> set = new HashSet<>();
+        for(int num : nums){
+            set.add(num);
         }
-
-        // Step 2: Collect indices that are still positive (i+1 = missing number)
-        List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > 0) {
-                result.add(i + 1);
+        List<Integer> list = new ArrayList<>();
+        for(int i = 1 ; i <= nums.length;i++){
+            if(!set.contains(i)){
+                list.add(i);
             }
         }
-
-        return result;
+        return list;
     }
 }
 
